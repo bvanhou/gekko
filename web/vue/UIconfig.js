@@ -5,6 +5,7 @@
 console.log(process.env.OPENSHIFT_NODEJS_PORT);
 console.log('world');
 console.log(process.env.OPENSHIFT_NODEJS_IP);
+console.log(process.env.NODE_ENV);
 const CONFIG = {
   headless: true,
   api: {
