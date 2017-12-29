@@ -4,15 +4,15 @@
 // process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT
 // see https://github.com/askmike/gekko/blob/stable/docs/installing_gekko_on_a_server.md
 const CONFIG = {
-  headless: false,
+  headless: true,
   api: {
-    host: process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '172.17.0.3',
+    host: process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0',
     port: 8080,
     timeout: 120000 // 2 minutes
   },
   ui: {
     ssl: false,
-    host: process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1',
+    host: process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '172.17.0.3',
     port: 8080,
     path: '/'
   },
