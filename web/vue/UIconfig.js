@@ -3,7 +3,7 @@
 
 // see https://github.com/askmike/gekko/blob/stable/docs/installing_gekko_on_a_server.md
 const CONFIG = {
-  headless: true,
+  headless: false,
   api: {
     host: '127.0.0.1',
     port: 3000,
@@ -11,12 +11,13 @@ const CONFIG = {
   },
   ui: {
     ssl: false,
-    host: '172.30.87.145',
-    port: 8080,
+    host: 'localhost',
+    port: 3000,
     path: '/'
   },
   adapter: 'sqlite'
 }
+
 
 if(typeof window === 'undefined')
   module.exports = CONFIG;
