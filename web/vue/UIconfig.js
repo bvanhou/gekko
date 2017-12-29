@@ -11,8 +11,8 @@ const CONFIG = {
   },
   ui: {
     ssl: false,
-    host: 'localhost',
-    port: 3000,
+    host: '172.30.87.145',
+    port: 8080,
     path: '/'
   },
   adapter: 'sqlite'
