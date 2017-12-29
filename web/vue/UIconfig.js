@@ -4,16 +4,16 @@
 // process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT
 // see https://github.com/askmike/gekko/blob/stable/docs/installing_gekko_on_a_server.md
 const CONFIG = {
-  headless: true,
+  headless: false,
   api: {
-    host: '0.0.0.0',
-    port: 8080,
+    host: '127.0.0.1',
+    port: 3000,
     timeout: 120000 // 2 minutes
   },
   ui: {
     ssl: false,
-    host: '172.17.0.3',
-    port: 8080,
+    host: 'localhost',
+    port: 3000,
     path: '/'
   },
   adapter: 'sqlite'
