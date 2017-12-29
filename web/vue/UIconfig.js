@@ -3,7 +3,7 @@
 // process.env.IP   || process.env.OPENSHIFT_NODEJS_IP 
 // process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT
 // see https://github.com/askmike/gekko/blob/stable/docs/installing_gekko_on_a_server.md
-module.exports = {
+exports default {
   headless: false,
     api: {
       host: '0.0.0.0',
