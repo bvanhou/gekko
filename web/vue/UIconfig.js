@@ -6,7 +6,7 @@
 const CONFIG = {
   headless: true,
   api: {
-    host: '0.0.0.0',
+    host: '127.0.0.1',
     port: 8080,
     timeout: 120000 // 2 minutes
   },
