@@ -6,13 +6,13 @@
 const CONFIG = {
   headless: true,
   api: {
-    host: process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0',
+    host: '0.0.0.0',
     port: 8080,
     timeout: 120000 // 2 minutes
   },
   ui: {
     ssl: false,
-    host: process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '172.17.0.3',
+    host: '172.17.0.3',
     port: 8080,
     path: '/'
   },
