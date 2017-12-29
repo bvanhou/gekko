@@ -7,13 +7,13 @@ const CONFIG = {
   headless: false,
   api: {
     host: '0.0.0.0',
-    port: process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
+    port: 8080,
     timeout: 120000 // 2 minutes
   },
   ui: {
     ssl: false,
-    host: process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '172.30.87.145',
-    port: process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
+    host: '172.30.87.145',
+    port: 8080,
     path: '/'
   },
   adapter: 'sqlite'
