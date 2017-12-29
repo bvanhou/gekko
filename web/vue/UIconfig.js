@@ -5,7 +5,6 @@
 // see https://github.com/askmike/gekko/blob/stable/docs/installing_gekko_on_a_server.md
 console.log(process.env);
 module.exports = {
- CONFIG : {
   headless: false,
     api: {
       host: '0.0.0.0',
@@ -19,7 +18,6 @@ module.exports = {
       path: '/'
     },
     adapter: 'sqlite'
-  }
 };
 
 
