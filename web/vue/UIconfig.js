@@ -12,7 +12,7 @@ const CONFIG = {
   },
   ui: {
     ssl: false,
-    host: process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '172.30.87.145,
+    host: process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '172.30.87.145',
     port: process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
     path: '/'
   },
