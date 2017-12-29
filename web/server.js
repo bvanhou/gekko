@@ -7,7 +7,9 @@ const _ = require('lodash');
 const bodyParser = require('koa-bodyparser');
 
 const opn = require('opn');
-const server = require('http').createServer();
+const server = require('http').createServer(function(request, respone){
+   console.log(request.url);  
+});
 const router = require('koa-router')();
 const ws = require('ws');
 const app = koa();
