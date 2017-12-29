@@ -1,7 +1,7 @@
 // console.log(process.env.OPENSHIFT_NODEJS_PORT);
 console.log(process.env.PORT);
 console.log('world');
-console.log(process.env.HOST );
+console.log(process.env.OPENSHIFT_NODEJS_IP );
 // console.log(process.env.NODE_ENV);
 
 const config = require('./vue/UIconfig');
