@@ -2,7 +2,9 @@
 // frontend as well as the web server.
 
 // see https://github.com/askmike/gekko/blob/stable/docs/installing_gekko_on_a_server.md
-
+console.log(process.env.OPENSHIFT_NODEJS_PORT);
+console.log('world');
+console.log(process.env.OPENSHIFT_NODEJS_IP);
 const CONFIG = {
   headless: true,
   api: {
