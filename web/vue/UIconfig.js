@@ -6,7 +6,7 @@ const CONFIG = {
   headless: true,
   api: {
     host: '127.0.0.1',
-    port: process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
+    port: 8080,
     timeout: 120000 // 2 minutes
   },
   ui: {
