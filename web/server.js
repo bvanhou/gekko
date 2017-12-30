@@ -69,11 +69,21 @@ router.post('/api/getCandles', require(ROUTE('getCandles')));
 
 
 // incoming WS:
-wss.on('connection', ws => {
-  ws.on('message', _.noop);
-  console.log('sockets');
-  console.log(wss.clients.size);
-});
+// wss.on('connection', ws => {
+//   ws.on('message', _.noop);
+//   console.log('sockets');
+//   console.log(wss.clients.size);
+// });
+wss.on("connection", function connection(ws) {
+    console.log('websocket connection');
+    var connectionID = idCounter++;
+    connections.set(connectionID, ws);
+    var session = connections.get(connectionID);
+    session.on("message", function incoming(message) {
+        session.send(message);
+    }
+}
+
 
 app
   .use(cors())
