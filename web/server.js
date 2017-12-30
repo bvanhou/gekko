@@ -18,6 +18,9 @@ const app = koa();
 const WebSocketServer = require('ws').Server;
 const wss = new WebSocketServer({ server: server });
 
+//Gracefully close all open WebSocket connections.
+wss.closeAllConnections();
+
 const cache = require('./state/cache');
 const ListManager = require('./state/listManager');
 
@@ -78,9 +81,6 @@ wss.on('connection', function(ws) {
   });
   ws.send('Welcome!');
 });
-
-console.log("Listening to " + ipaddress + ":" + port + "...");
-
 
 
 app
