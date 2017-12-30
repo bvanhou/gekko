@@ -9,7 +9,7 @@ if(typeof window === 'undefined'){
    console.log('undefined window');
  
    module.exports =  {
-    headless: false,
+    headless: true,
       api: {
         host: '0.0.0.0',
         port: process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
@@ -28,7 +28,7 @@ if(typeof window === 'undefined'){
   console.log('defined window');
   
   window.CONFIG = {
-    headless: false,
+    headless: true,
     api: {
       host: '0.0.0.0',
       port: 8080,
@@ -36,7 +36,7 @@ if(typeof window === 'undefined'){
     },
     ui: {
       ssl: false,
-      host: 'localhost',
+      host: '127.0.0.1',
       port: 8080,
       path: '/'
     },
