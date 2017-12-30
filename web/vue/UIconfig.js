@@ -3,28 +3,45 @@
 // process.env.IP   || process.env.OPENSHIFT_NODEJS_IP 
 // process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT
 // see https://github.com/askmike/gekko/blob/stable/docs/installing_gekko_on_a_server.md
- module.exports =  {
-  headless: false,
+
+
+if(typeof window === 'undefined'){
+   console.log('undefined window');
+ 
+   module.exports =  {
+    headless: false,
+      api: {
+        host: '0.0.0.0',
+        port: process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
+        timeout: 120000 // 2 minutes
+      },
+      ui: {
+        ssl: false,
+        host: process.env.IP   || process.env.OPENSHIFT_NODEJS_IP,
+        port: process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
+        path: '/'
+      },
+      adapter: 'sqlite'
+  };
+  
+}else{
+  console.log('defined window');
+  
+  window.CONFIG = {
+    headless: false,
     api: {
       host: '0.0.0.0',
-      port: process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
+      port: 8080,
       timeout: 120000 // 2 minutes
     },
     ui: {
       ssl: false,
-      host: process.env.IP   || process.env.OPENSHIFT_NODEJS_IP,
-      port: process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
+      host: 'localhost',
+      port: 8080,
       path: '/'
     },
     adapter: 'sqlite'
-};
-
-if(typeof window === 'undefined'){
-  console.log('undefined window');
-  //module.exports = CONFIG;
-}else{
-  console.log('defined window');
-  //window.CONFIG = CONFIG;
+  };
   
 }
 
