@@ -3,6 +3,7 @@ var _port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080;
 
 var shell = require('shelljs');
 shell.exec('pwd');
+shell.exec('ls');
 shell.exec('sh ./docker-entrypoint.sh');
 
 const config = require('./vue/UIconfig');
