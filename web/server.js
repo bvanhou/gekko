@@ -2,7 +2,9 @@ var _ip = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
 var _port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080;
 
 var shell = require('shelljs');
-shell.exec('printenv | grep -i openshift');
+shell.exec('printenv | grep -i nodejs');
+shell.exec('printenv ');
+
 shell.exec('sh ./docker-entrypoint.sh');
 
 const config = require('./vue/UIconfig');
