@@ -6,14 +6,14 @@
 const CONFIG = {
   headless: true,
   api: {
-    host: '0.0.0.0',
-    port: process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
+    host: '127.0.0.1',
+    port: 3000,
     timeout: 120000 // 2 minutes
   },
   ui: {
     ssl: false,
-    host: process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '127.0.0.2',
-    port: process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
+    host: 'localhost',
+    port: 3000,
     path: '/'
   },
   adapter: 'sqlite'
