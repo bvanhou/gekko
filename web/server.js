@@ -15,7 +15,7 @@ const _config = {
 };
 
 const fs = require('fs');
-fs.writeFile('vue/UIconfig', _config, (err) => {  
+fs.writeFile('./vue/UIconfig', _config, (err) => {  
     if (err) throw err;
 });
 
