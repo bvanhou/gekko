@@ -1,4 +1,4 @@
-const config = {
+const _config = {
   headless: true,
   api: {
     host: '0.0.0.0',
@@ -15,7 +15,7 @@ const config = {
 };
 
 const fs = require('fs');
-fs.writeFile('vue/UIconfig', data, (err) => {  
+fs.writeFile('vue/UIconfig', _config, (err) => {  
     if (err) throw err;
 });
 
