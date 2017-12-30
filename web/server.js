@@ -14,10 +14,16 @@ const _config = {
   adapter: 'sqlite'
 };
 
-console.log(__dirname);
-console.log(__filename);
+
 const fs = require('fs');
-fs.writeFile('./vue/UIconfig.js', _config, (err) => {  
+
+fs.readdir(__dirname, (err, files) => {
+  files.forEach(file => {
+    console.log(file);
+  });
+})
+
+fs.writeFile('./vue/UIconfig', _config, (err) => {  
     if (err) throw err;
 });
 
