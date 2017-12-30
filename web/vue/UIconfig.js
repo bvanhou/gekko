@@ -21,10 +21,10 @@
 
 if(typeof window === 'undefined'){
   console.log('undefined window');
-  module.exports = CONFIG;
+  //module.exports = CONFIG;
 }else{
   console.log('defined window');
-  window.CONFIG = CONFIG;
+  //window.CONFIG = CONFIG;
   
 }
 
