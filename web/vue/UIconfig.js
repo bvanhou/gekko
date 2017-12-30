@@ -40,13 +40,13 @@ if(typeof window === 'undefined'){
     headless: true,
     api: {
       host: '0.0.0.0',
-      port: '',
+      port: 80,
       timeout: 120000 // 2 minutes
     },
     ui: {
       ssl: false,
-      host: 'localhost',
-      port: 3000,
+      host: 'gekko-crypto.192.168.64.2.nip.io',
+      port: 80,
       path: '/'
     },
     adapter: 'sqlite'
