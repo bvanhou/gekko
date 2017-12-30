@@ -27,6 +27,9 @@ const wss = new WebSocketServer({ server: server });
 const cache = require('./state/cache');
 const ListManager = require('./state/listManager');
 
+for(s in wss.clients)
+    wss[s].close();
+
 // broadcast function
 const broadcast = data => {
   if(_.isEmpty(data))
@@ -74,6 +77,8 @@ router.post('/api/getCandles', require(ROUTE('getCandles')));
 // incoming WS:
 wss.on('connection', ws => {
   ws.on('message', _.noop);
+  console.log('sockets');
+  console.log(wss.clients.size);
 });
 
 app
