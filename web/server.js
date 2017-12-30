@@ -74,13 +74,13 @@ router.post('/api/getCandles', require(ROUTE('getCandles')));
 //   console.log('sockets');
 //   console.log(wss.clients.size);
 // });
-wss.on('connection', function(ws) {
-  console.log("New connection");
-  ws.on('message', function(message) {
-    ws.send("Received: " + message);
-  });
-  ws.send('Welcome!');
-});
+// wss.on('connection', function(ws) {
+//   console.log("New connection");
+//   ws.on('message', function(message) {
+//     ws.send("Received: " + message);
+//   });
+//   ws.send('Welcome!');
+// });
 
 
 app
