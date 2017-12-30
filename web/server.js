@@ -1,11 +1,11 @@
 var _ip = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
 var _port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080;
 
-var shell = require('shelljs');
+// var shell = require('shelljs');
 
-shell.sed('-i', 's/127.0.0.1/0.0.0.0/g', './vue/UIconfig.js');
-shell.sed('-i', 's/localhost/'+_ip+'/g', './vue/UIconfig.js');
-shell.sed('-i', 's/3000/'+_port+'/g', './vue/UIconfig.js');
+// shell.sed('-i', 's/127.0.0.1/0.0.0.0/g', './vue/UIconfig.js');
+// shell.sed('-i', 's/localhost/'+_ip+'/g', './vue/UIconfig.js');
+// shell.sed('-i', 's/3000/'+_port+'/g', './vue/UIconfig.js');
 
 const config = require('./vue/UIconfig');
 
