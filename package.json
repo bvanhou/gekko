@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "test": "./node_modules/.bin/mocha test/*.js --recursive test -u tdd --reporter spec",
-    "start": "chmod +x ./docker-entrypoint.sh && ./docker-entrypoint.sh && node ./gekko --config config.js --ui"
+    "start": "./docker-entrypoint.sh && node ./gekko --config config.js --ui"
   },
   "author": "Mike van Rossum <mike@mvr.me>",
   "dependencies": {
