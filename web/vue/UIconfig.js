@@ -21,9 +21,10 @@ const CONFIG = {
 
 if(typeof window === 'undefined'){
   console.log('nooo window');
-  console.log( process.env.IP );
+  console.log( CONFIG );
   module.exports = CONFIG;
 }else{
   console.log('yes window');
+  console.log( CONFIG );
   window.CONFIG = CONFIG;
 }
