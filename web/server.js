@@ -1,5 +1,5 @@
-var shell = require('shelljs');
-shell.exec('sh ./docker-entrypoint.sh');
+// var shell = require('shelljs');
+// shell.exec('sh ./docker-entrypoint.sh');
 
 const config = require('./vue/UIconfig');
 
