@@ -19,7 +19,10 @@ const CONFIG = {
   adapter: 'sqlite'
 }
 
-if(typeof window === 'undefined')
+if(typeof window === 'undefined'){
+  console.log('nooo window');
   module.exports = CONFIG;
-else
+}else{
+  console.log('yes window');
   window.CONFIG = CONFIG;
+}
