@@ -1,6 +1,6 @@
 #!/bin/bash
 
-IP=hostname -i
+IP="$(hostname -i)"
 
 sed -i 's/127.0.0.1/0.0.0.0/g' ./web/vue/UIconfig.js
 sed -i 's/localhost/'${IP}'/g' ./web/vue/UIconfig.js
