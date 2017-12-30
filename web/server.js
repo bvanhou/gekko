@@ -18,9 +18,6 @@ const app = koa();
 const WebSocketServer = require('ws').Server;
 const wss = new WebSocketServer({ server: server });
 
-//Gracefully close all open WebSocket connections.
-wss.closeAllConnections();
-
 const cache = require('./state/cache');
 const ListManager = require('./state/listManager');
 
@@ -31,7 +28,10 @@ const broadcast = data => {
 
   _.each(
     wss.clients,
-    client => client.send(JSON.stringify(data))
+    client => {
+      console.log(client);
+      client.send(JSON.stringify(data))
+    }
   );
 }
 cache.set('broadcast', broadcast);
