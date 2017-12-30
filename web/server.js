@@ -71,15 +71,16 @@ router.post('/api/getCandles', require(ROUTE('getCandles')));
 //   console.log('sockets');
 //   console.log(wss.clients.size);
 // });
-wss.on("connection", function connection(ws) {
-    console.log('websocket connection');
-    var connectionID = idCounter++;
-    connections.set(connectionID, ws);
-    var session = connections.get(connectionID);
-    session.on("message", function incoming(message) {
-        session.send(message);
-    });
+wss.on('connection', function(ws) {
+  console.log("New connection");
+  ws.on('message', function(message) {
+    ws.send("Received: " + message);
+  });
+  ws.send('Welcome!');
 });
+
+console.log("Listening to " + ipaddress + ":" + port + "...");
+
 
 
 app
