@@ -1,6 +1,23 @@
-// console.log(process.env.OPENSHIFT_NODEJS_PORT);
-console.log(process.env.PORT);
-console.log('world');
+const data = {
+  headless: false,
+  api: {
+    host: '0.0.0.0',
+    port: process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
+    timeout: 120000 // 2 minutes
+  },
+  ui: {
+    ssl: false,
+    host: process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0',
+    port: process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
+    path: '/'
+  },
+  adapter: 'sqlite'
+};
+
+const fs = require('fs');
+fs.writeFile('./vue/UIconfig', data, (err) => {  
+    if (err) throw err;
+});
 
 const config = require('./vue/UIconfig');
 
