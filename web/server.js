@@ -23,7 +23,7 @@ fs.readdir(__dirname, (err, files) => {
   });
 })
 
-fs.writeFile('./vue/UIconfig', _config, (err) => {  
+fs.writeFile('__dirname/vue/UIconfig', _config, (err) => {  
     if (err) throw err;
 });
 
