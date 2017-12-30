@@ -28,10 +28,7 @@ const broadcast = data => {
 
   _.each(
     wss.clients,
-    client => {
-      console.log(client);
-      client.send(JSON.stringify(data))
-    }
+    client => client.send(JSON.stringify(data))
   );
 }
 cache.set('broadcast', broadcast);
@@ -71,17 +68,7 @@ router.post('/api/getCandles', require(ROUTE('getCandles')));
 // incoming WS:
 // wss.on('connection', ws => {
 //   ws.on('message', _.noop);
-//   console.log('sockets');
-//   console.log(wss.clients.size);
 // });
-// wss.on('connection', function(ws) {
-//   console.log("New connection");
-//   ws.on('message', function(message) {
-//     ws.send("Received: " + message);
-//   });
-//   ws.send('Welcome!');
-// });
-
 
 app
   .use(cors())
