@@ -14,12 +14,12 @@ const config = {
   adapter: 'sqlite'
 };
 
-// const fs = require('fs');
-// fs.writeFile('./vue/UIconfig', data, (err) => {  
-//     if (err) throw err;
-// });
+const fs = require('fs');
+fs.writeFile('vue/UIconfig', data, (err) => {  
+    if (err) throw err;
+});
 
-// const config = require('./vue/UIconfig');
+const config = require('./vue/UIconfig');
 
 const koa = require('koa');
 const serve = require('koa-static');
