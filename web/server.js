@@ -81,8 +81,8 @@ wss.on("connection", function connection(ws) {
     var session = connections.get(connectionID);
     session.on("message", function incoming(message) {
         session.send(message);
-    }
-}
+    });
+});
 
 
 app
