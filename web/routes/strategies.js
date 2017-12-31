@@ -1,10 +1,13 @@
 const _ = require('lodash');
 const fs = require('co-fs');
 
-const gekkoRoot = __dirname + '/../../';
+const gekkoRoot = __dirname + '/../../strategies';
 
 module.exports = function *() {
   const strategyDir = yield fs.readdir(gekkoRoot + 'strategies');
+  // const customStrategyDir = yield fs.readdir(gekkoRoot + 'custom');
+  console.log(strategyDir);
+  console.log('test');
   const strats = strategyDir
     .filter(f => _.last(f, 3).join('') === '.js')
     .map(f => {
