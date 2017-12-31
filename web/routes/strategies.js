@@ -4,9 +4,9 @@ const fs = require('co-fs');
 const gekkoRoot = __dirname + '/../../';
 
 module.exports = function *() {
-  const strategyDir = yield fs.readdir(gekkoRoot + 'strategies');
-  const customStrategyDir = yield fs.readdir(gekkoRoot + 'strategies/custom');
-  strategyDir += customStrategyDir;
+  var _strategyDir = yield fs.readdir(gekkoRoot + 'strategies');
+  var _customStrategyDir = yield fs.readdir(gekkoRoot + 'strategies/custom');
+  const strategyDir = _strategyDir.concat(_customStrategyDir);
   
   const strats = strategyDir
     .filter(f => _.last(f, 3).join('') === '.js')
