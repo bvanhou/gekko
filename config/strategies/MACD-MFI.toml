@@ -1,0 +1,12 @@
+optInTimePeriod=10
+
+short = 10
+long = 21
+signal = 9
+
+[thresholds]
+overbought = 80
+oversold = 20
+down = -0.025
+up = 0.025
+persistence = 1
