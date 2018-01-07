@@ -58,7 +58,7 @@ method.log = function() {
 
 method.check = function() {
   var macddiff = this.indicators.macd.result;
-  console.log(macddiff);
+
   if(macddiff > this.settings.thresholds.up) {
 
     // new trend detected

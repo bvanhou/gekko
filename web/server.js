@@ -23,6 +23,18 @@ const wss = new WebSocketServer({ server: server });
 const cache = require('./state/cache');
 const ListManager = require('./state/listManager');
 
+// var twilio = require('twilio');
+
+// // Find your account sid and auth token in your Twilio account Console.
+// var client = new twilio('AC66b852cbd008a679f3fed5c8459fb9dc', 'de9a3447057bb658a05536a1cc9ac0c3');
+
+//         // Send the text message.
+//         client.messages.create({
+//             to: '+19806890840',
+//             from: '+18782061275',
+//             body: 'Test'
+//           }).then((message) => console.log('message '+message.sid));
+
 // broadcast function
 const broadcast = data => {
   if(_.isEmpty(data))

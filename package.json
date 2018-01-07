@@ -68,7 +68,8 @@
     "proxyquire": "^1.7.10",
     "sinon": "^1.12.2",
     "talib": "^1.0.3",
-    "tulind": "^0.8.9"
+    "tulind": "^0.8.9",
+    "twilio": "^3.11.0"
   },
   "engines": {
     "node": ">=6.0"
